@@ -16,7 +16,6 @@ public class FlightDTO {
 	
 	
 	public FlightDTO() {
-		
 	}
 
 
