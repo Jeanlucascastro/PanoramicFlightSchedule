@@ -7,4 +7,5 @@ import com.panoramic.fist.entities.Flight;
 public interface FlightRepository extends JpaRepository<Flight, Integer> {
 	
 
+	
 }

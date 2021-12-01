@@ -13,13 +13,17 @@ public class FlightService {
 	@Autowired
 	private FlightRepository flightRepository;
 	
+	
 	public FlightDTO findById(Integer id) {
 		Flight entity = flightRepository.findById(id).get();
 		FlightDTO dto = new FlightDTO(entity);
 		return dto;
 	}
 	
-	
+	public Flight insert(Flight fly) {
+		
+		return flightRepository.save(fly);
+	}
 	
 	
 	

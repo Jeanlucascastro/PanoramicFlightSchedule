@@ -1,0 +1,1 @@
+INSERT INTO panoramicdb (name, INITIAL_DATE , FINAL_DATE) VALUES ('joao', '10-11', '12-10');

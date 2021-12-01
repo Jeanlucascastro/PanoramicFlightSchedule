@@ -1,6 +1,5 @@
 package com.panoramic.fist.dto;
 
-import java.util.Date;
 
 import com.panoramic.fist.entities.Flight;
 
@@ -11,15 +10,15 @@ public class FlightDTO {
 
 	@Getter @Setter private Integer id;
 	@Getter @Setter private String name;
-	@Getter @Setter private Date initialDate;
-	@Getter @Setter private Date finalDate;
+	@Getter @Setter private String initialDate;
+	@Getter @Setter private String finalDate;
 	
 	
 	public FlightDTO() {
 	}
 
 
-	public FlightDTO(Integer id, String name, Date initialDate, Date finalDate) {
+	public FlightDTO(Integer id, String name, String initialDate, String finalDate) {
 		this.id = id;
 		this.name = name;
 		this.initialDate = initialDate;
