@@ -1,5 +1,6 @@
 package com.panoramic.fist.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,20 +16,24 @@ import com.panoramic.fist.services.FlightService;
 @RestController
 @RequestMapping(value = "/flights")
 public class FlightController {
-
+	
+	@Autowired
 	private FlightService flightService;
 	
-	
-	@GetMapping()
-	public FlightDTO findById(@PathVariable Integer id) {
-		return flightService.findById(id);
-	}
-	
+//	
+//	@GetMapping()
+//	public FlightDTO findById(@PathVariable Integer id) {
+//		return flightService.findById(id);
+//	}
+//	
 	@PostMapping
 	public ResponseEntity<Flight> insert (@RequestBody Flight fly){
 		fly = flightService.insert(fly);
 		return ResponseEntity.ok().body(fly);
+//		return flightService.teste(fly);
+
 	}
+	
 
 	
 }
