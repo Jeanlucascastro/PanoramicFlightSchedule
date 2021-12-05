@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.panoramic.fist.dto.FlightDTO;
 import com.panoramic.fist.entities.Flight;
 import com.panoramic.fist.services.FlightService;
 
@@ -20,11 +19,11 @@ public class FlightController {
 	@Autowired
 	private FlightService flightService;
 	
-//	
-//	@GetMapping()
-//	public FlightDTO findById(@PathVariable Integer id) {
-//		return flightService.findById(id);
-//	}
+
+	@GetMapping(value = "/{id}")
+	public Flight findById(@PathVariable Integer id) {
+		return flightService.findById(id);
+	}
 //	
 	@PostMapping
 	public ResponseEntity<Flight> insert (@RequestBody Flight fly){

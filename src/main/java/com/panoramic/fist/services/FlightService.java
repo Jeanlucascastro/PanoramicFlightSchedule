@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
-import com.panoramic.fist.dto.FlightDTO;
 import com.panoramic.fist.entities.Flight;
 import com.panoramic.fist.repositories.FlightRepository;
 
@@ -16,11 +15,12 @@ public class FlightService {
 	private FlightRepository flightRepository;
 	
 	
-	public FlightDTO findById(Integer id) {
+	public Flight findById(Integer id) {
 		Flight entity = flightRepository.findById(id).get();
-		FlightDTO dto = new FlightDTO(entity);
-		return dto;
+		return entity;
 	}
+	
+	
 	
 	public Flight insert(Flight fly) {
 		
