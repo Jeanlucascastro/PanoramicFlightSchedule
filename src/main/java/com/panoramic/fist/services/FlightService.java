@@ -1,5 +1,7 @@
 package com.panoramic.fist.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
@@ -20,7 +22,9 @@ public class FlightService {
 		return entity;
 	}
 	
-	
+	public List<Flight> findall(){
+		return flightRepository.findAll();
+	}
 	
 	public Flight insert(Flight fly) {
 		

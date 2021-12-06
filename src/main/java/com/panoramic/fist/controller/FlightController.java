@@ -1,5 +1,7 @@
 package com.panoramic.fist.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +21,13 @@ public class FlightController {
 	@Autowired
 	private FlightService flightService;
 	
+	@GetMapping(value = "/all")
+	public ResponseEntity<List<Flight>> findall(){
+		List<Flight> list = flightService.findall();
+		return ResponseEntity.ok(list);
+	}
 
+	
 	@GetMapping(value = "/{id}")
 	public Flight findById(@PathVariable Integer id) {
 		return flightService.findById(id);
