@@ -10,27 +10,27 @@ public class FlightDTO {
 
 	@Getter @Setter private Integer id;
 	@Getter @Setter private String name;
-	@Getter @Setter private String initialDate;
-	@Getter @Setter private String finalDate;
+	@Getter @Setter private String initialdate;
+	@Getter @Setter private String finaldate;
 	
 	
 	public FlightDTO() {
 	}
 
 
-	public FlightDTO(Integer id, String name, String initialDate, String finalDate) {
+	public FlightDTO(Integer id, String name, String initialdate, String finaldate) {
 		this.id = id;
 		this.name = name;
-		this.initialDate = initialDate;
-		this.finalDate = finalDate;
+		this.initialdate = initialdate;
+		this.finaldate = finaldate;
 	}
 	
 	
 	public FlightDTO(Flight flight) {
 		id = flight.getId();
 		name = flight.getName();
-		initialDate = flight.getInitialDate();
-		finalDate = flight.getFinalDate();
+//		initialdate = flight.getinitialdate();
+		finaldate = flight.getFinaldate();
 	}
 	
 	

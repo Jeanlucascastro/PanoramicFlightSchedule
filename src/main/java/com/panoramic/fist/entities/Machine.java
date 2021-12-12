@@ -11,7 +11,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name = "machinedb")
+@Table(name = "tb_machinedb")
 public class Machine {
 	
 	

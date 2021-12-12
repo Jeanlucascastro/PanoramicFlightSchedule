@@ -13,27 +13,27 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "panoramicdb")
+@Table(name = "tb_panoramicdb")
 public class Flight {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Getter @Setter private Integer id;
 	@Getter @Setter private String name;
-	@Getter @Setter private String initialDate;
-	@Getter @Setter private String finalDate;
-	@Getter @Setter private Integer machineId;
+	@Getter @Setter private String initialdate;
+	@Getter @Setter private String finaldate;
+	@Getter @Setter private Integer machineid;
 	
 	
 	
 	public Flight (){
 	}
 
-	public Flight(Integer id, String name, String initialDate, String finalDate) {
+	public Flight(Integer id, String name, String iinitialdate, String finaldate) {
 		this.id = id;
 		this.name = name;
-		this.initialDate = initialDate;
-		this.finalDate = finalDate;
+		this.initialdate = iinitialdate;
+		this.finaldate = finaldate;
 	}
 	
 	
