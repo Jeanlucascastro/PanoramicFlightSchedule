@@ -22,6 +22,9 @@ public class Flight {
 	@Getter @Setter private String name;
 	@Getter @Setter private String initialDate;
 	@Getter @Setter private String finalDate;
+	@Getter @Setter private Integer machineId;
+	
+	
 	
 	public Flight (){
 	}

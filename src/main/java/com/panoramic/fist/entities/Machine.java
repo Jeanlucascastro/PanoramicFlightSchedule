@@ -1,26 +1,41 @@
 package com.panoramic.fist.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.Getter;
 import lombok.Setter;
 
+
+@Entity
+@Table(name = "machinedb")
 public class Machine {
 	
-	@Getter @Setter private Integer Id;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Getter @Setter private Integer id;
 	@Getter @Setter private String name;
-	@Getter @Setter private boolean operante;
+	@Getter @Setter private String matricula;
+	@Getter @Setter private String anoFabricacao;
 	@Getter @Setter private boolean uso;
 	
 	public Machine () {
-		
 	}
 
-	public Machine(Integer id, String name, boolean operante, boolean uso) {
+	public Machine(Integer id, String name, String matricula, String anoFabricacao, boolean uso) {
 		super();
-		Id = id;
+		this.id = id;
 		this.name = name;
-		this.operante = operante;
+		this.matricula = matricula;
+		this.anoFabricacao = anoFabricacao;
 		this.uso = uso;
 	}
+
+
 	
 	
 
