@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.panoramic.fist.entities.Flight;
@@ -16,7 +18,12 @@ public class FlightService {
 	@Autowired
 	private FlightRepository flightRepository;
 	
-	
+	public Page<Flight> findall(Pageable pageable){
+		flightRepository.findAll();
+		Page<Flight> result = flightRepository.findAll(pageable);
+		return result;
+	}
+
 	public Flight findById(Integer id) {
 		Flight entity = flightRepository.findById(id).get();
 		return entity;
